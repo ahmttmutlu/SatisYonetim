@@ -1,0 +1,38 @@
+﻿@model DurumViewModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+
+<form method="post" class="col-6">
+    <div class="card">
+        <div class="card-header bg-warning text-center bg-gradient">Yeni Durum Ekleme</div>
+        <div class="card-body">
+
+            <div class="row mb3">
+                <label class="form-label">Teklif Adı</label>
+                <input class="form-control" asp-for="TeklifAdi" placeholder="Lütfen Adı Giriniz" required />
+            </div>
+            <div class="row mb3">
+                <label class="form-label">Müşteri ADI</label>
+                <input class="form-control" asp-for="MusteriAdi" placeholder="müster adi giriniz" required />
+            </div>
+            <div class="row mb3">
+                <label class="form-label">Fiyat</label>
+                <input class="form-control" asp-for="Fiyat" placeholder="fiyatı giriniz" required />
+            </div>
+            <br />
+            <div class="row mb3">
+                <label>Durum:</label>
+                <select asp-for="DurumAdi" asp-items="@ViewBag.DurumListesi"></select><br />
+
+
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </div>
+</form>

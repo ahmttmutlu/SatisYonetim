@@ -1,0 +1,26 @@
+﻿@model Durum
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+<form method="post" class="col-6">
+    <div class="card">
+        <div class="card-header bg-warning text-center bg-gradient">Yeni Durum Ekleme</div>
+        <div class="card-body">
+
+            <div class="row mb3">
+                <label class="form-label">Durum Adı</label>
+                <input class="form-control" asp-for="DurumAdi" placeholder="Lütfen Adı Giriniz" required />
+            </div>
+            <div class="row mb3">
+                <label class="form-label">Durum Sırası</label>
+                <input class="form-control" asp-for="DurumSira" placeholder="durum sırasını giriniz" required />
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <button type="submit" class="btn btn-primary">Add</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </div>
+</form>

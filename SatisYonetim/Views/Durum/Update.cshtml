@@ -1,0 +1,20 @@
+﻿@model Durum
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="DurumId" />
+    <div class="form-group">
+        <label asp-for="DurumAdi"></label>
+        <input asp-for="DurumAdi" class="form-control" />
+        <span asp-validation-for="DurumAdi" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DurumSira"></label>
+        <input asp-for="DurumSira" class="form-control" />
+        <span asp-validation-for="DurumSira" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+</form>
