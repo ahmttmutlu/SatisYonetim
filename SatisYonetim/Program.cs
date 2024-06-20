@@ -11,7 +11,7 @@ namespace SatisYonetim
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
-            string connectionString = "Server=DESKTOP-CB6V4KQ\\SQLEXPRESS; Database=SatisYonetim; Integrated Security=True; TrustServerCertificate=Yes";//her yerden eriþim saðlamak için buraya da ekledim
+           
             builder.Services.AddSingleton(new DurumRepository(connectionString));
 
             builder.Services.AddSingleton(new TeklifRepository(connectionString));
